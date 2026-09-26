@@ -1,0 +1,92 @@
+header img {
+    z-index: 1000;
+    position: absolute;
+    top: 8px;
+    left: 8px;
+    width: 80px;
+}
+footer img {
+    z-index: 1000;
+    position: absolute;
+    top: 1183px;
+    left: 8px;
+    width: 80px;
+}
+
+/* Overall page */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header */
+header {
+    background-color: #222;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    
+}
+
+/* Navigation */
+nav {
+    margin-top: 10px;
+    
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+/* Main content */
+main {
+    max-width: 1000px;
+    margin: 30px auto;
+    padding: 20px;
+}
+
+/* Sections */
+section {
+    background-color: white;
+    padding: 25px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+}
+
+/* Section headings */
+h2 {
+    margin-bottom: 10px;
+}
+
+/* Articles */
+article {
+    border: 1px solid #ddd;
+    padding: 20px;
+    margin-top: 15px;
+    border-radius: 5px;
+}
+
+/* Aside */
+aside {
+    background-color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-left: 5px solid #333;
+}
+
+/* Footer */
+footer {
+    background-color: #222;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 30px;
+}
