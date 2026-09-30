@@ -97,3 +97,23 @@ footer {
     margin-top: 30px;
     position: relative;
 }
+
+/* Night mode: only applies when <body> has the class "night" */
+body.night {
+    color: #e6ecff;
+}
+
+body.night header,
+body.night footer {
+    background-color: #0a1224;
+}
+
+body.night section,
+body.night aside {
+    background-color: #16223f;
+    color: #e6ecff;
+}
+
+body.night article {
+    border-color: #2a3a66;
+}
