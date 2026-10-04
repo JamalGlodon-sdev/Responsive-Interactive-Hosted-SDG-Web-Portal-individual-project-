@@ -3,7 +3,8 @@
 
 <head>
     <link rel="stylesheet" href="../cs.css">
-    <meta charset="UTF-8">
+    <!-- Start loading the background photo early to avoid a grey flash -->
+    <link rel="preload" as="image" href="../images/Amazon-Rainforest.jpg">    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Biodiversity and Ecosystems</title>
@@ -11,7 +12,8 @@
 
 <body>
     <header>
-        <button id="themeToggle">dark/light mode</button>
+        <!-- Icon button: moon in day mode, sun in night mode -->
+        <button id="themeToggle" aria-label="Toggle dark or light mode">🌙</button>
         <img src="../images/logo for project.png" alt="Biodiversity Image" class="header-image">
     
         <h1>About/Facts</h1>
@@ -64,7 +66,7 @@
     
         <p>2026 SDG Web Portal</p>
     </footer>
-
+    <script src="../js.js"></script>
 </body>
 
 </html>
