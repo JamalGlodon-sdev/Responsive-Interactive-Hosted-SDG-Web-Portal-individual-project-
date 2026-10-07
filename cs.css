@@ -32,8 +32,9 @@ body {
     background-color:#2f5233;
     color: #333;
     /*background img */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.35), rgba(0, 0, 0, 0.35)), url("../images/Amazon-Rainforest.jpg");
-    background-repeat: no-repeat;
+    --bg-image: url("images/Amazon-Rainforest.jpg");   /* the picture */
+    --overlay: rgba(0, 0, 0, 0.35);                    /* the dark tint on top of it */
+    background-image: linear-gradient(var(--overlay), var(--overlay)), var(--bg-image);    background-repeat: no-repeat;
     background-position: center;
     background-attachment: fixed;
     background-size: cover;
@@ -133,8 +134,7 @@ footer {
 /* Night mode: only applies when <body> has the class "night" */
 body.night {
     color: #e6ecff;
-    background-image: linear-gradient(rgba(5, 10, 30, 0.65), rgba(5, 10, 30, 0.65)), url("../images/Amazon-Rainforest.jpg");
-    background-color: #0a1224;
+    --overlay: rgba(5, 10, 30, 0.65);    background-color: #0a1224;
 }
 
 body.night header {
@@ -278,7 +278,7 @@ header {
 .goal-16 { background-color: #00689D; }
 .goal-17 { background-color: #19486A; }
 
-body.bg-home      { background-image: url("images/Amazon-Rainforest.jpg"); }
-body.bg-threats   { background-image: url("images/dessert.jpg"); }
-body.bg-solutions { background-image: url("images/solutions.jpg"); }
-body.bg-facts     { background-image: url("images/mountains.jpg"); }
+body.bg-home      { --bg-image: url("images/Amazon-Rainforest.jpg"); }
+body.bg-threats   { --bg-image: url("images/dessert.jpg"); }
+body.bg-solutions { --bg-image: url("images/solutions.jpg"); }
+body.bg-facts     { --bg-image: url("images/mountains.jpg"); }
