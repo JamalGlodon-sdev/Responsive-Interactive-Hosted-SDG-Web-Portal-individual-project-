@@ -277,3 +277,8 @@ header {
 .goal-15 { background-color: #56C02B; }
 .goal-16 { background-color: #00689D; }
 .goal-17 { background-color: #19486A; }
+
+body.bg-home      { background-image: url("images/Amazon-Rainforest.jpg"); }
+body.bg-threats   { background-image: url("images/dessert.jpg"); }
+body.bg-solutions { background-image: url("images/solutions.jpg"); }
+body.bg-facts     { background-image: url("images/mountains.jpg"); }
