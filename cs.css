@@ -175,7 +175,7 @@ h1, h2, h3 {
     font-family: 'Poppins', Arial, sans-serif;
 }
 
-@keyframes fadeIn {/* Animation: slowly appear */
+@keyframes fadeIn { Animation: slowly appear */
     from { opacity: 0; }
     to   { opacity: 1; }
 }
