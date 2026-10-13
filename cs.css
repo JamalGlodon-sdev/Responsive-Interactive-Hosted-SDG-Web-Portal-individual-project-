@@ -1,75 +1,92 @@
-header img {
-    width: 60px;
-    order: 1;
-}
-header h1 {
-    order: 2;
-    margin: 0 auto 0 0;
-    font-size: 1.6rem;
-}
-
-header nav {
-    order: 3;
-    margin-top: 0;
-}
-
-header #themeToggle {
-    order: 4;
-}
-
-footer img {
-    z-index: 1000;
-    position: absolute;
-    top: 8px;
-    left: 8px;
-    width: 80px;
-}
 
 /* Overall page */
 body {
+    margin: 0;
     font-family: Arial, sans-serif;
     line-height: 1.6;
-    background-color:#2f5233;
+    background-color: #2f5233;
     color: #333;
-    /*background img */
-    --bg-image: url("images/Amazon-Rainforest.jpg");   /* the picture */
-    --overlay: rgba(0, 0, 0, 0.35);                    /* the dark tint on top of it */
-    background-image: linear-gradient(var(--overlay), var(--overlay)), var(--bg-image);    background-repeat: no-repeat;
+
+    /* Background image */
+    --bg-image: url("images/Amazon-Rainforest.jpg");
+    --overlay: rgba(0, 0, 0, 0.35);
+
+    background-image:
+        linear-gradient(var(--overlay), var(--overlay)),
+        var(--bg-image);
+    background-repeat: no-repeat;
     background-position: center;
-    background-attachment: fixed;
+    background-attachment: scroll;
     background-size: cover;
+
     transition: color 0.4s ease;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
 }
 
 /* Header */
 header {
     background: linear-gradient(135deg, #1b5e20, #222);
     color: white;
-    padding: 15px 30px;
+    padding: 12px 15px;
     display: flex;
     align-items: center;
     flex-wrap: wrap;
-    gap: 15px;
-    
+    gap: 10px;
+}
+
+header > a {
+    order: 1;
+    flex-shrink: 0;
+}
+
+header img {
+    display: block;
+    width: 45px;
+}
+
+header h1 {
+    order: 2;
+    flex: 1;
+    min-width: 0;
+    margin: 0;
+    font-size: 1.2rem;
+}
+
+header nav {
+    order: 4;
+    width: 100%;
+    margin-top: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 4px;
+}
+
+header #themeToggle {
+    order: 3;
+    flex-shrink: 0;
 }
 
 /* Navigation */
-nav {
-    margin-top: 10px;
-    
-}
-
 nav a {
     color: white;
     text-decoration: none;
-    display: inline-block; /*makes each link behave like a small box*/
-    margin: 0 6px;
-    padding: 8px 16px;
+    display: inline-block;
+    margin: 3px;
+    padding: 8px 10px;
     border-radius: 20px;
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-nav a:hover {
+nav a:hover,
+nav a:focus-visible {
     background-color: #2e7d32;
 }
 
@@ -78,51 +95,79 @@ nav a:active {
     transform: scale(0.96);
 }
 
+nav a[aria-current="page"] {
+    background-color: rgba(255, 255, 255, 0.18);
+    font-weight: bold;
+}
+
 /* Main content */
 main {
-    max-width: none;
-    margin: 30px auto;
-    padding: 20px;
+    width: 100%;
+    max-width: 1200px;
+    margin: 15px auto;
+    padding: 10px;
 }
 
 /* Sections */
 section {
-     background-color: white;
-    padding: 25px;
+    background-color: white;
+    color: #333;
+    padding: 15px;
     margin-bottom: 20px;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
-        transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.4s ease, color 0.4s ease;
-}
-section:hover {
-    transform: translateY(-4px); /*applies when your mouse is over the box.*/
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease,
+                box-shadow 0.3s ease,
+                background-color 0.4s ease,
+                color 0.4s ease;
 }
 
-/* Section headings */
+section h2 {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+@media (hover: hover) and (pointer: fine) {
+    section:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.25);
+    }
+}
+
+/* Headings */
+h1, h2, h3 {
+    font-family: 'Poppins', Arial, sans-serif;
+}
+
 h2 {
     margin-bottom: 10px;
 }
 
 /* Articles */
 article {
-     border: 1px solid #ddd;
+    border: 1px solid #ddd;
     border-left: 5px solid #2e7d32;
-    padding: 20px;
+    padding: 15px;
     margin-top: 15px;
     border-radius: 8px;
-        transition: border-color 0.4s ease;
+    transition: border-color 0.4s ease;
+}
+
+article h3 {
+    margin-top: 0;
 }
 
 /* Aside */
 aside {
     background-color: #e8f5e9;
-    padding: 20px;
+    color: #234127;
+    padding: 18px;
     margin-bottom: 20px;
     border-left: 5px solid #2e7d32;
     border-radius: 8px;
-    
-    transition: background-color 0.4s ease, color 0.4s ease, border-color 0.4s ease;
+    transition: background-color 0.4s ease,
+                color 0.4s ease,
+                border-color 0.4s ease;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
 }
 
@@ -131,39 +176,32 @@ footer {
     background: linear-gradient(135deg, #222, #1b5e20);
     color: white;
     text-align: center;
-    padding: 20px;
+    padding: 20px 15px;
     margin-top: 30px;
     position: relative;
 }
 
-/* Night mode: only applies when <body> has the class "night" */
-body.night {
-    color: #e6ecff;
-    --overlay: rgba(5, 10, 30, 0.65);    background-color: #0a1224;
+footer img {
+    display: block;
+    width: 60px;
+    margin: 0 auto 10px;
 }
 
-body.night header {
-    background: linear-gradient(135deg, #0a1224, #16223f); /*blends from one color to another.*/
+footer a {
+    color: #d5f5d5;
 }
 
-body.night footer {
-    background: linear-gradient(135deg, #16223f, #0a1224);
-}
-body.night section,
-body.night aside {
-    background-color: #16223f;
-    color: #e6ecff;
+footer a:hover {
+    color: white;
+    text-decoration: underline;
 }
 
-body.night article {
-    border-color: #2a3a66;
-}
-
+/* Theme toggle */
 #themeToggle {
     background-color: transparent;
     color: white;
     border: 2px solid white;
-    border-radius: 50%; /* makes it a circle */
+    border-radius: 50%;
     width: 42px;
     height: 42px;
     padding: 0;
@@ -176,50 +214,55 @@ body.night article {
     background-color: rgba(255, 255, 255, 0.25);
     transform: rotate(20deg);
 }
-h1, h2, h3 {
-    font-family: 'Poppins', Arial, sans-serif;
-}
 
-@keyframes fadeIn { /*Animation: slowly appear */
+/* Animations */
+@keyframes fadeIn {
     from { opacity: 0; }
-    to   { opacity: 1; }
+    to { opacity: 1; }
 }
 
-@keyframes fadeUp {/* Animation: slowly appear while sliding up */
-    from { opacity: 0; transform: translateY(30px); }
-    to   { opacity: 1; transform: translateY(0); }
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
-main > * {/* Every box inside main slides up and appears */
+
+main > * {
     animation: fadeUp 0.7s ease backwards;
 }
 
-/* Smoothly crossfade between pages */
+/* Page transitions */
 @view-transition {
     navigation: auto;
 }
 
-/* Keep the header in place while the page changes */
 header {
     view-transition-name: site-header;
 }
 
-/* Make the page crossfade a bit faster */
 ::view-transition-old(root),
 ::view-transition-new(root) {
     animation-duration: 0.3s;
 }
 
+/* Sources grid */
 .source-grid {
-    list-style: none;   /* removes the bullet points */
-    margin: 0;          /* removes the default list margin */
-    padding: 0;         /* removes the default left indent */
+    list-style: none;
+    margin: 0;
+    padding: 0;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
-    gap: 16px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 12px;
 }
 
 .source-card {
-    aspect-ratio: 1 / 1;
+    min-width: 0;
+    min-height: 100px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -229,45 +272,52 @@ header {
     border-radius: 8px;
     text-decoration: none;
     font-weight: bold;
+    overflow-wrap: anywhere;
 }
 
+/* Topic grid */
 .topic-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    grid-template-columns: 1fr;
     gap: 16px;
 }
 
 .topic-grid a {
-    color: inherit;           /* card text uses the normal text colour, not link blue */
-    text-decoration: none;    /* removes the underline from the whole card */
+    color: inherit;
+    text-decoration: none;
 }
 
 .topic-card {
     display: flex;
-    gap: 16px;
-    padding: 20px;
-    margin-top: 0;            /* cancels the 15px that the general "article" rule adds */
+    flex-direction: column;
+    gap: 12px;
+    min-width: 0;
+    padding: 15px;
+    margin-top: 0;
     border: 1px solid rgba(128, 128, 128, 0.4);
 }
 
 .topic-card img {
-    width: 110px;
-    height: 150px;
+    display: block;
+    width: 100%;
+    height: 180px;
     object-fit: cover;
-    flex-shrink: 0;
+    border-radius: 5px;
 }
 
 .topic-info {
     display: flex;
     flex-direction: column;
+    min-width: 0;
 }
 
 .topic-info h3 {
-    margin: 0 0 auto 0;
+    margin: 0 0 8px;
+    overflow-wrap: anywhere;
 }
 
 .goals-label {
-    margin: 12px 0 6px 0;
+    margin: 12px 0 6px;
     font-size: 0.9rem;
     opacity: 0.7;
 }
@@ -292,91 +342,149 @@ header {
 .goal-16 { background-color: #00689D; }
 .goal-17 { background-color: #19486A; }
 
-body.bg-home      { --bg-image: url("images/Amazon-Rainforest.jpg"); }
-body.bg-threats   { --bg-image: url("images/dessert.jpg"); }
-body.bg-solutions { --bg-image: url("images/solutions.jpg"); }
-body.bg-facts     { --bg-image: url("images/mountains.jpg"); }
+/* Page background variations */
+body.bg-home {
+    --bg-image: url("images/Amazon-Rainforest.jpg");
+}
 
+body.bg-threats {
+    --bg-image: url("images/dessert.jpg");
+}
 
-/* ===== Phone version (screens 768px wide or less) ===== */
-@media (max-width: 768px) {
+body.bg-solutions {
+    --bg-image: url("images/solutions.jpg");
+}
 
-    /* Fixed backgrounds are buggy on phones, so let it scroll normally */
+body.bg-facts {
+    --bg-image: url("images/mountains.jpg");
+}
+
+/* Desktop screens */
+@media (min-width: 769px) {
     body {
-        background-attachment: scroll;
+        background-attachment: fixed;
     }
 
-    /* Header: logo + title + toggle on the first row, nav on its own row */
     header {
-        padding: 12px 15px;
-        gap: 10px;
+        padding: 15px 30px;
+        gap: 15px;
     }
 
-    header h1 {
-        font-size: 1.3rem;
-    }
-
-    header #themeToggle {
-        order: 3;           /* moves the toggle up next to the title */
-    }
-
-    header nav {
-        order: 4;
-        width: 100%;        /* nav takes a full row below */
-        margin-top: 0;
-        text-align: center;
-    }
-
-    nav a {
-        margin: 3px;
-        padding: 10px 14px; /* big enough to tap with a thumb */
-    }
-
-    /* Main content: less empty space around the boxes */
-    main {
-        margin: 15px auto;
-        padding: 10px;
-    }
-
-    section {
-        padding: 15px;
-    }
-
-    /* Hover lift is pointless on a touchscreen */
-    section:hover {
-        transform: none;
-    }
-
-    /* Grids: one card per row, two squares per row */
-    .topic-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .source-grid {
-        grid-template-columns: repeat(2, 1fr);
-    }
-
-    /* Topic cards: picture on top instead of beside the text */
-    .topic-card {
-        flex-direction: column;
-        padding: 15px;
-    }
-
-    .topic-card img {
-        width: 100%;
-        height: 180px;
-    }
-
-    /* Footer logo goes back into normal flow instead of floating over the text */
-    footer img {
-        position: static;
-        display: block;
-        margin: 0 auto 10px auto;
+    header img {
         width: 60px;
     }
 
-    /* Nothing is allowed to be wider than the screen */
-    img {
-        max-width: 100%;
+    header h1 {
+        flex: 0 1 auto;
+        margin-right: auto;
+        font-size: 1.6rem;
+    }
+
+    header nav {
+        order: 3;
+        width: auto;
+        margin-left: auto;
+    }
+
+    header #themeToggle {
+        order: 4;
+    }
+
+    nav a {
+        margin: 0 3px;
+        padding: 8px 14px;
+    }
+
+    main {
+        margin: 30px auto;
+        padding: 20px;
+    }
+
+    section {
+        padding: 25px;
+    }
+
+    article {
+        padding: 20px;
+    }
+
+    aside {
+        padding: 20px;
+    }
+
+    .topic-grid {
+        grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    }
+
+    .topic-card {
+        flex-direction: row;
+        gap: 16px;
+        padding: 20px;
+    }
+
+    .topic-card img {
+        width: 110px;
+        height: 150px;
+        flex-shrink: 0;
+    }
+
+    .source-grid {
+        grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+        gap: 16px;
+    }
+
+    .source-card {
+        aspect-ratio: 1 / 1;
+    }
+}
+
+/* Dark mode */
+body.night {
+    color: #e6ecff;
+    --overlay: rgba(5, 10, 30, 0.65);
+    background-color: #0a1224;
+}
+
+body.night header {
+    background: linear-gradient(135deg, #0a1224, #16223f);
+}
+
+body.night footer {
+    background: linear-gradient(135deg, #16223f, #0a1224);
+}
+
+body.night section,
+body.night article {
+    background-color: #16223f;
+    color: #e6ecff;
+    border-color: #2a3a66;
+}
+
+body.night article {
+    border-left-color: #56C02B;
+}
+
+body.night aside {
+    background-color: #16223f;
+    color: #e6ecff;
+    border-left-color: #56C02B;
+}
+
+body.night .source-card {
+    border-color: #7084b8;
+}
+
+body.night footer a {
+    color: #c6e1ff;
+}
+
+/* Reduce animation for users who prefer less motion */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
     }
 }
