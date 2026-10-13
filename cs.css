@@ -73,6 +73,11 @@ nav a:hover {
     background-color: #2e7d32;
 }
 
+nav a:active {
+    background-color: #1b5e20;
+    transform: scale(0.96);
+}
+
 /* Main content */
 main {
     max-width: none;
@@ -205,6 +210,9 @@ header {
 }
 
 .source-grid {
+    list-style: none;   /* removes the bullet points */
+    margin: 0;          /* removes the default list margin */
+    padding: 0;         /* removes the default left indent */
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
     gap: 16px;
@@ -229,10 +237,16 @@ header {
     gap: 16px;
 }
 
+.topic-grid a {
+    color: inherit;           /* card text uses the normal text colour, not link blue */
+    text-decoration: none;    /* removes the underline from the whole card */
+}
+
 .topic-card {
     display: flex;
     gap: 16px;
     padding: 20px;
+    margin-top: 0;            /* cancels the 15px that the general "article" rule adds */
     border: 1px solid rgba(128, 128, 128, 0.4);
 }
 

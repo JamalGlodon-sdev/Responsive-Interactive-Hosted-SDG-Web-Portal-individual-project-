@@ -16,7 +16,7 @@
         <!-- Icon button: moon in day mode, sun in night mode -->
         <button id="themeToggle" aria-label="Toggle dark or light mode">🌙</button>
         <a href="landing.html">
-            <img src="../images/logo for project.png" alt="Go to the welcome page" class="header-image">
+            <img src="../images/logo-for-project.png" alt="Go to the welcome page" class="header-image">
         </a>
         <h1>About/Facts</h1>
 
@@ -24,7 +24,7 @@
             <a href="index.html">Home</a>
             <a href="Threats.html">Threats</a>
             <a href="Solutions.html">Solutions</a>
-            <a href="About.html">About/stats</a>
+            <a href="About.html" aria-current="page">About/stats</a>
         </nav>
     </header>
 
@@ -74,76 +74,76 @@
         <section>
             <h2>Related Topics</h2>
 
-            <div>
+            <div class="topic-grid">
 
-             <a href ="https://sdgs.un.org/topics/biodiversity-and-ecosystems">
-                <article class="topic-card">
-                    <img src="../images/elk-1.png" alt="Elkin a mountain meadow">
-                    <div >
-                        <h3>Biodiversity and ecosystems</h3>
-                        <p class="goals-label">Related Goals</p>
-                        <div class="goal-badges">
-                            <span class="badge goal-15">15</span>
-                        </div>
-                    </div>
-                </article>
-             </a>
-
-                <a class ="topic-grid" href="https://sdgs.un.org/topics/forests">
+                <a href="https://sdgs.un.org/topics/biodiversity-and-ecosystems">
                     <article class="topic-card">
-                    <img src="../images/sun light thr forest.jpg" alt="Sunlight through a forest">
-                    <div >
-                        <h3>Forests</h3>
-                        <p class="goals-label">Related Goals</p>
-                        <div class="goal-badges">
-                            <span class="badge goal-15">15</span>
+                        <img src="../images/elk-1.png" alt="Elk in a mountain meadow">
+                        <div class="topic-info">
+                            <h3>Biodiversity and ecosystems</h3>
+                            <p class="goals-label">Related Goals</p>
+                            <div class="goal-badges">
+                                <span class="badge goal-15">15</span>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </a>
+
+                <a href="https://sdgs.un.org/topics/forests">
+                    <article class="topic-card">
+                        <img src="../images/sun-light-thr-forest.jpg" alt="Sunlight through a forest">
+                        <div class="topic-info">
+                            <h3>Forests</h3>
+                            <p class="goals-label">Related Goals</p>
+                            <div class="goal-badges">
+                                <span class="badge goal-15">15</span>
+                            </div>
+                        </div>
+                    </article>
                 </a>
 
                 <a href="https://sdgs.un.org/topics/mountains">
                     <article class="topic-card">
-                    <img src="../images/mountains.jpg" alt="Mountains">
-                    <div>
-                        <h3>Mountains</h3>
-                        <p class="goals-label">Related Goals</p>
-                        <div class="goal-badges">
-                            <span class="badge goal-15">15</span>
+                        <img src="../images/mountains.jpg" alt="Mountains">
+                        <div class="topic-info">
+                            <h3>Mountains</h3>
+                            <p class="goals-label">Related Goals</p>
+                            <div class="goal-badges">
+                                <span class="badge goal-15">15</span>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
                 </a>
 
                 <a href="https://sdgs.un.org/topics/national-sustainable-development-strategies">
-                <article class="topic-card">
-                    <img src="../images/tropical waters.jpg" alt="Clear tropical water">
-                    <div >
-                        <h3>National strategies and SDG integration</h3>
-                        <p class="goals-label">Related Goals</p>
-                        <div class="goal-badges">
-                            <span class="badge goal-3">3</span>
-                            <span class="badge goal-11">11</span>
-                            <span class="badge goal-13">13</span>
-                            <span class="badge goal-15">15</span>
-                            <span class="badge goal-16">16</span>
-                            <span class="badge goal-17">17</span>
-                        </div>
-                    </div>
-                </article>
-                </a>
-                
-                <a href ="https://sdgs.un.org/topics/desertification-land-degradation-and-drought">
                     <article class="topic-card">
-                    <img src="../images/sandDunes.jpg" alt="Sand dunes">
-                    <div class="topic-info">
-                        <h3>Desertification, land degradation and drought</h3>
-                        <p class="goals-label">Related Goals</p>
-                        <div class="goal-badges">
-                            <span class="badge goal-15">15</span>
+                        <img src="../images/tropical-waters.jpg" alt="Clear tropical water">
+                        <div class="topic-info">
+                            <h3>National strategies and SDG integration</h3>
+                            <p class="goals-label">Related Goals</p>
+                            <div class="goal-badges">
+                                <span class="badge goal-3">3</span>
+                                <span class="badge goal-11">11</span>
+                                <span class="badge goal-13">13</span>
+                                <span class="badge goal-15">15</span>
+                                <span class="badge goal-16">16</span>
+                                <span class="badge goal-17">17</span>
+                            </div>
                         </div>
-                    </div>
-                </article>
+                    </article>
+                </a>
+
+                <a href="https://sdgs.un.org/topics/desertification-land-degradation-and-drought">
+                    <article class="topic-card">
+                        <img src="../images/sandDunes.jpg" alt="Sand dunes">
+                        <div class="topic-info">
+                            <h3>Desertification, land degradation and drought</h3>
+                            <p class="goals-label">Related Goals</p>
+                            <div class="goal-badges">
+                                <span class="badge goal-15">15</span>
+                            </div>
+                        </div>
+                    </article>
                 </a>
 
             </div>
@@ -152,17 +152,24 @@
         <section>
             <h2>Sources</h2>
 
-            <div class="source-grid">
-                <a class="source-card" href="https://sdgs.un.org/goals/goal15" target="_blank" rel="noopener">
-                    UN SDG 15
-                </a>
-                <a class="source-card" href="https://sdgs.un.org/sites/default/files/2022-07/SDG15_FACTSHEET.pdf" target="_blank" rel="noopener">
-                    UN SDG 15 Factsheet
-                </a>
-                <a class="source-card" href="https://www.un.org/en/node/82132" target="_blank" rel="noopener">
-                    UN: Life on Land
-                </a>
-            </div>
+            <ul class="source-grid">
+                <li>
+                    <a class="source-card" href="https://sdgs.un.org/goals/goal15" target="_blank" rel="noopener">
+                        UN SDG 15
+                    </a>
+                </li>
+                <li>
+                    <a class="source-card" href="https://sdgs.un.org/sites/default/files/2022-07/SDG15_FACTSHEET.pdf"
+                        target="_blank" rel="noopener">
+                        UN SDG 15 Factsheet
+                    </a>
+                </li>
+                <li>
+                    <a class="source-card" href="https://www.un.org/en/node/82132" target="_blank" rel="noopener">
+                        UN: Life on Land
+                    </a>
+                </li>
+            </ul>
         </section>
 
         <aside>
@@ -173,9 +180,16 @@
     </main>
 
     <footer>
-        <img src="../images/logo for project.png" alt="Biodiversity Image" class="header-image">
+        <img src="../images/logo-for-project.png" alt="SDG Web Portal logo" class="header-image">
 
-        <p> &copy; 2026 SDG Web Portal, Jamal Glodon. All rights reserved.</p>
+        <p>
+            Contact:
+            <a href="mailto:jamalglodon@Outlook.com?subject=SDG%2015%20Web%20Portal%20Enquiry">
+                jamalglodon@Outlook.com
+            </a>
+        </p>
+
+        <p>&copy; 2026 SDG Web Portal, Jamal Glodon. All rights reserved.</p>
     </footer>
     <script src="../js.js"></script>
 </body>
