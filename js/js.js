@@ -36,3 +36,21 @@ btn.addEventListener("click", function () {
     // Swap the icon to match the new mode
     updateIcon();
 });
+
+var answers = { q1: "a", q2: "b", q3: "a" };
+
+    function checkAnswers() {
+      var score = 0;
+      var total = 0;
+
+      for (var question in answers) {
+        total++;
+        var chosen = document.querySelector('input[name="' + question + '"]:checked');
+        if (chosen && chosen.value === answers[question]) {
+          score++;
+        }
+      }
+
+      document.getElementById("result").textContent =
+        "You scored " + score + " out of " + total;
+    }
