@@ -54,3 +54,11 @@ var answers = { q1: "a", q2: "b", q3: "a" };
       document.getElementById("result").textContent =
         "You scored " + score + " out of " + total;
     }
+
+    const goBtn = document.getElementById("goBtn");
+
+if (goBtn) {
+    goBtn.addEventListener("click", function () {
+        window.location.href = "quiz.html";
+    });
+    }
