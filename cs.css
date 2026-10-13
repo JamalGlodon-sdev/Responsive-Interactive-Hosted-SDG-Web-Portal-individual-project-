@@ -175,7 +175,7 @@ h1, h2, h3 {
     font-family: 'Poppins', Arial, sans-serif;
 }
 
-@keyframes fadeIn { Animation: slowly appear */
+@keyframes fadeIn { /*Animation: slowly appear */
     from { opacity: 0; }
     to   { opacity: 1; }
 }
@@ -283,3 +283,86 @@ body.bg-threats   { --bg-image: url("images/dessert.jpg"); }
 body.bg-solutions { --bg-image: url("images/solutions.jpg"); }
 body.bg-facts     { --bg-image: url("images/mountains.jpg"); }
 
+
+/* ===== Phone version (screens 768px wide or less) ===== */
+@media (max-width: 768px) {
+
+    /* Fixed backgrounds are buggy on phones, so let it scroll normally */
+    body {
+        background-attachment: scroll;
+    }
+
+    /* Header: logo + title + toggle on the first row, nav on its own row */
+    header {
+        padding: 12px 15px;
+        gap: 10px;
+    }
+
+    header h1 {
+        font-size: 1.3rem;
+    }
+
+    header #themeToggle {
+        order: 3;           /* moves the toggle up next to the title */
+    }
+
+    header nav {
+        order: 4;
+        width: 100%;        /* nav takes a full row below */
+        margin-top: 0;
+        text-align: center;
+    }
+
+    nav a {
+        margin: 3px;
+        padding: 10px 14px; /* big enough to tap with a thumb */
+    }
+
+    /* Main content: less empty space around the boxes */
+    main {
+        margin: 15px auto;
+        padding: 10px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    /* Hover lift is pointless on a touchscreen */
+    section:hover {
+        transform: none;
+    }
+
+    /* Grids: one card per row, two squares per row */
+    .topic-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .source-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* Topic cards: picture on top instead of beside the text */
+    .topic-card {
+        flex-direction: column;
+        padding: 15px;
+    }
+
+    .topic-card img {
+        width: 100%;
+        height: 180px;
+    }
+
+    /* Footer logo goes back into normal flow instead of floating over the text */
+    footer img {
+        position: static;
+        display: block;
+        margin: 0 auto 10px auto;
+        width: 60px;
+    }
+
+    /* Nothing is allowed to be wider than the screen */
+    img {
+        max-width: 100%;
+    }
+}
