@@ -532,3 +532,16 @@ body.night .quiz-box {
 body.night .quiz-box h1 {
     color: #8be26b;
 }
+
+/* Logo size */
+.logo img {
+    display: block;
+    width: 45px;
+    height: auto;
+}
+
+@media (min-width: 769px) {
+    .logo img {
+        width: 60px;
+    }
+}
