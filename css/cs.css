@@ -235,20 +235,6 @@ main > * {
     animation: fadeUp 0.7s ease both;
 }
 
-/* Page transitions */
-@view-transition {
-    navigation: auto;
-}
-
-header {
-    view-transition-name: site-header;
-}
-
-::view-transition-old(root),
-::view-transition-new(root) {
-    animation-duration: 0.3s;
-}
-
 /* Sources grid */
 .source-grid {
     list-style: none;
@@ -477,58 +463,72 @@ body.night footer a {
     color: #c6e1ff;
 }
 
+/* ===== Quiz page =====  */
+.quiz-box {
+    max-width: 600px;
+    margin: 20px auto;
+    padding: 24px;
+    background-color: white;
+    color: #333;
+    border-radius: 8px;
+    border: 2px solid #3b6b35;
+    transition: background-color 0.4s ease, color 0.4s ease;
+}
 
-body {
-      font-family: Arial, sans-serif;
-      background-color: #eef4ea;
-      margin: 0;
-      padding: 20px;
-    }
+.quiz-box h1 {
+    color: #1b5e20;
+    margin-top: 0;
+}
 
-    .quiz-box {
-      max-width: 600px;
-      margin: 0 auto;
-      background-color: white;
-      padding: 24px;
-      border-radius: 8px;
-      border: 2px solid #3b6b35;
-    }
+.quiz-box .question {
+    margin-bottom: 20px;
+}
 
-    h1 {
-      color: #fcfffb;
-      margin-top: 0;
-    }
+.quiz-box .question p {
+    font-weight: bold;
+}
 
-    .question {
-      margin-bottom: 20px;
-    }
+.quiz-box label {
+    display: block;
+    padding: 6px 0;
+    cursor: pointer;
+}
 
-    .question p {
-      font-weight: bold;
-    }
+.quiz-box label:hover {
+    text-decoration: underline;
+}
 
-    label {
-      display: block;
-      padding: 6px 0;
-      cursor: pointer;
-    }
+.quiz-box button {
+    background-color: #3b6b35;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+}
 
-    button {
-      background-color: #3b6b35;
-      color: white;
-      border: none;
-      padding: 10px 20px;
-      font-size: 16px;
-      border-radius: 5px;
-      cursor: pointer;
-    }
+.quiz-box button:hover {
+    background-color: #2d5128;
+}
 
-    button:hover {
-      background-color: #2d5128;
-    }
+.quiz-box button:active {
+    transform: scale(0.96);
+}
 
-    #result {
-      margin-top: 16px;
-      font-size: 18px;
-      font-weight: bold;
-    }
+#result {
+    margin-top: 16px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+/* Quiz box in dark mode */
+body.night .quiz-box {
+    background-color: #16223f;
+    color: #e6ecff;
+    border-color: #56C02B;
+}
+
+body.night .quiz-box h1 {
+    color: #8be26b;
+}
